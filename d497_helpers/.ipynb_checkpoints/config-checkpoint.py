@@ -1,10 +1,10 @@
 #from pathlib import Path
 
 from d497_helpers import folder_manager
-
 import json
 
 
+folder_manager.initialize_folder_paths()
 
 try:
     with open(".json", "r") as file:

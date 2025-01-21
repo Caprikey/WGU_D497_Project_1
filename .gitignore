@@ -1,3 +1,20 @@
 
 *.pkl
 *.csv
+data/shapefile/tl_2024_us_county.shp
+data/shapefile/tl_2024_us_county.prj
+data/shapefile/tl_2024_us_county.dbf
+data/shapefile/tl_2024_us_county.cpg
+data/shapefile/tl_2024_us_county.shx
+data/shapefile/tl_2024_us_county.shp.iso.xml
+data/shapefile/tl_2024_us_county.shp.ea.iso.xml
+data_analysis_ufo_data_part_a.ipynb
+/notebooks/.ipynb_checkpoints
+/scripts/.ipynb_checkpoints
+/d497_helpers/.ipynb_checkpoints
+/d497_helpers/.ipynb_checkpoints
+/d497_helpers/__pycache__
+/d497_helpers/__pycache__
+/d497_helpers/__pycache__
+/d497_helpers/__pycache__
+/.ipynb_checkpoints

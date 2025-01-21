@@ -1,10 +1,10 @@
 {
     "doc": "D:\\WGU\\D497\\WGU_D497_Project_1\\doc",
     "cdc_footer": "D:\\WGU\\D497\\WGU_D497_Project_1\\doc\\cdc_data_footers",
-    "readme": "D:\\WGU\\D497\\WGU_D497_Project_1\\doc\\read_me",
+    "read_me": "D:\\WGU\\D497\\WGU_D497_Project_1\\doc\\read_me",
     "scripts": "D:\\WGU\\D497\\WGU_D497_Project_1\\scripts",
     "notebooks": "D:\\WGU\\D497\\WGU_D497_Project_1\\notebooks",
-    "bin_folder": "D:\\WGU\\D497\\WGU_D497_Project_1\\bin",
+    "bin": "D:\\WGU\\D497\\WGU_D497_Project_1\\bin",
     "results": "D:\\WGU\\D497\\WGU_D497_Project_1\\results",
     "data": "D:\\WGU\\D497\\WGU_D497_Project_1\\data",
     "archived_data": "D:\\WGU\\D497\\WGU_D497_Project_1\\data\\archived_data",

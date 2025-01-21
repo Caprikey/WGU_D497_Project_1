@@ -4,9 +4,9 @@
 # In[ ]:
 
 
-# Version 5
-## 12/25/24
-## 22:24
+# Version 6
+## 1/20/25
+## 17:35
 
 
 # In[2]:
@@ -155,6 +155,33 @@ def export_to_sql(dataframe, tablename):
         # Close the session
         session.close()
 
+def append_to_sql(dataframe, tablename):
+
+    #self.session = session
+    
+    try:
+        # Start a transaction
+        with session.begin():
+            # Get the raw connection
+            connection = session.connection()
+            
+            # Write DataFrame to database
+            dataframe.to_sql(tablename, con=connection, if_exists='append', index=False)
+            #FIPS_df.to_sql('FIPS', con=connection, if_exists='replace', index=False)
+            
+        
+        #print("Data inserted successfully!")
+        
+    except Exception as e:
+        # Rollback transaction on error
+        session.rollback()
+        print("Transaction failed! Rolling back...")
+        print(f"Error: {e}")
+        
+    finally:
+        # Close the session
+        session.close()
+
 
 def export_df_from_sql(sql_query, dataframe_name):
 
@@ -169,6 +196,35 @@ def export_df_from_sql(sql_query, dataframe_name):
         
             # Read SQL to Pandas dataframe
             dataframe_name = pd.read_sql(sql_query, con=connection)
+
+            # Return dataframe
+            return dataframe_name
+        
+        #print("Data inserted successfully!")
+        
+    except Exception as e:
+        # Rollback transaction on error
+        session.rollback()
+        print("Transaction failed! Rolling back...")
+        print(f"Error: {e}")
+        
+    finally:
+        # Close the session
+        session.close()
+
+def export_df_from_sql_with_params(sql_query, dataframe_name, params):
+
+    
+    #self.session = session
+    
+    try:
+    # Start a transaction
+        with session.begin():
+            # Get the raw connection
+            connection = session.connection()
+        
+            # Read SQL to Pandas dataframe
+            dataframe_name = pd.read_sql(sql_query, con=connection, params=parms)
 
             # Return dataframe
             return dataframe_name

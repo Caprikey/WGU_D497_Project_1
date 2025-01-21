@@ -1,0 +1,59 @@
+https://www.census.gov/library/reference/code-lists/ansi.html
+
+This website is worth looking into for future projects. 
+
+would be a simple parse of a text file in a fixed column format. 
+
+
+
+
+American Indian Areas
+
+    AIANNH Table
+        https://www2.census.gov/geo/docs/reference/codes2020/national_aiannh2020.txt
+
+    AIANNH by State Table
+        https://www2.census.gov/geo/docs/reference/codes2020/national_aiannh_by_state2020.txt
+
+
+Congressional Districts
+    https://www2.census.gov/geo/docs/reference/codes2020/national_cd116.txt
+
+
+County and County Equivalent Entities
+    https://www2.census.gov/geo/docs/reference/codes2020/cou/st01_al_cou2020.txt
+
+
+County Subdivisions
+    https://www2.census.gov/geo/docs/reference/codes2020/cousub/st01_al_cousub2020.txt
+
+
+Places
+
+    Place Table
+    https://www2.census.gov/geo/docs/reference/codes2020/place/st02_ak_place2020.txt
+
+
+
+    Place by County Table
+    https://www2.census.gov/geo/docs/reference/codes2020/place_by_cou/st01_al_place_by_county2020.txt
+
+
+
+School Districts
+    https://www2.census.gov/geo/docs/reference/codes2020/schdist/st01_al_schdist2020.txt
+
+
+
+State Legislative District (Lower Chamber)
+    https://www2.census.gov/geo/docs/reference/codes2020/sldl/st01_al_sldl2020.txt
+
+State Legislative District (Upper Chamber)
+    https://www2.census.gov/geo/docs/reference/codes2020/sldu/st01_al_sldu2020.txt
+
+State and State Equivalents
+    https://www2.census.gov/geo/docs/reference/codes2020/national_state2020.txt
+
+Voting Districts
+    https://www2.census.gov/geo/docs/reference/codes2020/vtd/st01_al_vtd2020.txt
+
