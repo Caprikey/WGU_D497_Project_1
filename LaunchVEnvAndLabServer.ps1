@@ -13,11 +13,12 @@ if (-Not (Test-Path -Path "\virtual_envs\")) {
     # Creating Virtual Environment Folder
     New-Item -ItemType Directory -Force -Path virtual_envs
     #New-Item -ItemType Directory -Force -Path Test
-    
+}
+
+if (-Not (Test-Path -Path "\virtual_envs\D497_Project_1_venv\")) {
     #Create a Virtual Env
     python -m venv virtual_envs/D497_Project_1_venv
     #python -m venv Test/D497_Project_Test_venv
-
 }
 
 # Activate the virtual environment
@@ -33,41 +34,45 @@ cd "WGU_D497_Project_1"
 # Install Custom Module
 python -m pip install -e .
 
+
 # Run Folder_Manger.py file to setup folder_paths and create any missing directories. 
 python ./d497_helpers/folder_manager.py
 
 # Launch a new powershell window and run the Launch Virtual Environment Script and keep window open. 
-Start-Process powershell -ArgumentList "-NoExit", "-File", "launchvenv.ps1"
+#Start-Process powershell -ArgumentList "-NoExit", "-File", "launchvenv.ps1"
 
 # Check if VS Code is installed, If true, launch VS Code from current directory, if false, do not launch vs code
-if ((Get-Process -Name code) -ne $null) { 
-
-    Write-Output "VS Code is installed" 
-
-    Write-Output "Launching VS Code in working directory"
-    
-    code . 
-    
-} else {
-    Write-Output "VS Code is not installed" 
-
-    Write-Output "Skipping VS Code Launch"
-
-}
+#if ((Get-Process -Name code) -ne $null) { 
+#
+#    Write-Output "VS Code is installed" 
+#
+#    Write-Output "Launching VS Code in working directory"
+#    
+#    code . 
+#    
+#} else {
+#    Write-Output "VS Code is not installed" 
+#
+#    Write-Output "Skipping VS Code Launch"
+#
+#}
 
 
 # Get Computer's IP Address and save to a variable 
-$IpAddress = (Get-NetIPAddress |
-  Where-Object {
-    $_.AddressState -eq 'Preferred' -and 
-    $_.ValidLifetime -lt '24:00:00'
-  }
-).IPAddress
+#$IpAddress = (Get-NetIPAddress |
+#  Where-Object {
+#    $_.AddressState -eq 'Preferred' -and 
+#    $_.ValidLifetime -lt '24:00:00'
+#  }
+#).IPAddress
 
 # Creating an expression to be involved to launch the juptyerlab to a specific page with ip, port, and notebook directory parameters set. 
-$expression = "python -m jupyterlab notebooks/order_of_operations_landing.ipynb --ip $($IpAddress[1]) --port 8888 --notebook-dir=."
+#$expression = "python -m jupyterlab notebooks/order_of_operations_landing.ipynb --ip $($IpAddress[1]) --port 8888 --notebook-dir=."
+#$expression = "python -m jupyterlab notebooks/order_of_operations_landing.ipynb --notebook-dir=."
 
 # Invoking expression above. 
-Invoke-Expression $expression
+#Invoke-Expression $expression
 
 #python -m jupyterlab notebooks/order_of_operations_landing.ipynb --ip $($IpAddress[1]) --port 8888 --notebook-dir=.
+
+python -m jupyterlab notebooks/order_of_operations_landing.ipynb --notebook-dir=.
