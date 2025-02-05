@@ -1,0 +1,1 @@
+This folder contains 7-zip archives of the data directory, documents directory, and results directory after the entirity of the project has been run, in the event you would prefer to have the data already provided. 

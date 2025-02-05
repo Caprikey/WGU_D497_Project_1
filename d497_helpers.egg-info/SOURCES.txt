@@ -1,4 +1,3 @@
-README.md
 setup.py
 d497_helpers/__init__.py
 d497_helpers/archive_module.py

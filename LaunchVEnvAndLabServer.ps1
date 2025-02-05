@@ -1,3 +1,6 @@
+# Verify PIP Is fully updated
+python -m pip install --upgrade pip
+
 # Verify Virtual Env module is installed 
 python -m pip install virtualenv
 
